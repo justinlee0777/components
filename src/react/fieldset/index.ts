@@ -1,5 +1,3 @@
-import FieldSet from "./fieldset.component";
+import FieldSet from './fieldset.component';
 
-export {
-    FieldSet,
-};
+export { FieldSet };
