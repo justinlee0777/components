@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "outDir": "development",
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "paths": {
+      "components/*": ["../dist/*"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
+  }
+}

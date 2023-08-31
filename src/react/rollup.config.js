@@ -7,7 +7,7 @@ import { readFileSync } from 'fs';
 import { inputDir, outputDir } from '../../rollup.config.const.js';
 
 const baseDir = 'react';
-const componentDirs = ['fieldset'];
+const componentDirs = ['fieldset', 'radiogroup'];
 
 const reactDir = `${inputDir}/${baseDir}`;
 
@@ -16,7 +16,7 @@ const pkg = JSON.parse(
 );
 
 const externalPackages = [
-  ...Object.keys(pkg.dependencies || {}),
+  // ...Object.keys(pkg.dependencies || {}),
   ...Object.keys(pkg.peerDependencies || {}),
 ];
 
@@ -44,7 +44,9 @@ export default {
       moduleDirectories: ['node_modules'],
     }),
     commonjs(),
-    typescript(),
+    typescript({
+      tsconfig: `${inputDir}/tsconfig.json`,
+    }),
     postcss({
       modules: {
         generateScopedName: 'react__[local]',

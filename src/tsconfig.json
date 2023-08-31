@@ -2,7 +2,7 @@
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true,
-    "outDir": "dist",
+    "outDir": "../dist",
     "target": "ES2022",
     "module": "ES2022",
     "moduleResolution": "node",
