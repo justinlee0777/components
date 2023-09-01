@@ -15,10 +15,7 @@ const pkg = JSON.parse(
   readFileSync(`${reactDir}/package.json`, { encoding: 'utf-8' }),
 );
 
-const externalPackages = [
-  // ...Object.keys(pkg.dependencies || {}),
-  ...Object.keys(pkg.peerDependencies || {}),
-];
+const externalPackages = [...Object.keys(pkg.peerDependencies || {})];
 
 // Creating regexes of the packages to make sure subpaths of the
 // packages are also treated as external
@@ -45,7 +42,7 @@ export default {
     }),
     commonjs(),
     typescript({
-      tsconfig: `${inputDir}/tsconfig.json`,
+      tsconfig: `${reactDir}/tsconfig.json`,
     }),
     postcss({
       modules: {
