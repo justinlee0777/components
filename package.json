@@ -3,7 +3,8 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build:lib": "rm -rf dist && rollup -c ./src/rollup.config.js",
+    "build:lib": "rm -rf dist && rollup -c ./src/rollup.config.js && npm run build:lib:types",
+    "build:lib:types": "npm -w=src/types run build:lib",
     "format": "prettier --write .",
     "build:dev": "npm run build:lib && rm -rf development && rollup -c ./e2e-tests/rollup.config.js && http-server -c-1 development",
     "test": "concurrently \"npm run test:react\" \"npm run test:utils\"",

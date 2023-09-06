@@ -1,5 +1,8 @@
 {
   "name": "@justinlee0777/types",
   "sideEffects": false,
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "build:lib": "tsc --project ./tsconfig.json"
+  }
 }
