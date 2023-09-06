@@ -1,12 +1,14 @@
 {
+  "name": "@justinlee0777/components",
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build:lib": "rm -rf dist && rollup -c",
+    "build:lib": "rm -rf dist && rollup -c ./src/rollup.config.js",
     "format": "prettier --write .",
     "build:dev": "npm run build:lib && rm -rf development && rollup -c ./e2e-tests/rollup.config.js && http-server -c-1 development",
-    "test": "concurrently \"npm run test:react\"",
-    "test:react": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=./src/react/jest.config.js"
+    "test": "concurrently \"npm run test:react\" \"npm run test:utils\"",
+    "test:react": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=./src/react/jest.config.js",
+    "test:utils": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=./src/utils/jest.config.js"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.4",
@@ -28,6 +30,8 @@
   },
   "workspaces": [
     "e2e-tests",
-    "src/react"
+    "src/react",
+    "src/types",
+    "src/utils"
   ]
 }

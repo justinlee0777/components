@@ -1,6 +1,9 @@
 import styles from './index.module.css';
 
-import { RadioGroup, RadioGroupOption } from 'components/react/radiogroup.js';
+import {
+  RadioGroup,
+  RadioGroupOption,
+} from 'components/react/radiogroup/index.js';
 import { useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 

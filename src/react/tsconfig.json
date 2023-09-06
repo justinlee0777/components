@@ -1,11 +1,7 @@
 {
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "declaration": true,
-    "esModuleInterop": true,
-    "outDir": "../../dist",
-    "target": "ES2022",
-    "module": "ES2022",
-    "moduleResolution": "node",
+    "outDir": "../../dist/react",
     "jsx": "react-jsx",
     "plugins": [
       {

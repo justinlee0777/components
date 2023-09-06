@@ -1,4 +1,5 @@
 {
+  "name": "@justinlee0777/react",
   "sideEffects": false,
   "type": "module",
   "devDependencies": {
