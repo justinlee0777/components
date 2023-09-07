@@ -5,3 +5,17 @@ Tree-shakeable component library useful for various projects. Per Fred Brooks' r
 which recommendation is excellent after careful thought.
 
 Components are also very useful because they encapsulate ideas from a million years ago.
+
+### Usage
+
+Download via NPM:
+
+```
+npm i --save
+```
+
+The package only supports ES6+ imports. Import a specific utility through its entrypoint - for example, to import the `FieldSet` component:
+
+```
+import { FieldSet } from '@justinlee0777/components/react/fieldset'
+```

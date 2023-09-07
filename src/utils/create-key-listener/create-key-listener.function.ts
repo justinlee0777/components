@@ -2,7 +2,7 @@ interface KeyCodesFunctionMap {
   [code: KeyboardEvent['code']]: EventListenerOrEventListenerObject;
 }
 
-export default function createKeydownListener(
+export default function createKeyListener(
   map: KeyCodesFunctionMap,
 ): EventListenerOrEventListenerObject {
   return (event: KeyboardEvent) => {
