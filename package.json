@@ -34,5 +34,6 @@
     "src/react",
     "src/types",
     "src/utils"
-  ]
+  ],
+  "version": "0.0.1-alpha.0"
 }
