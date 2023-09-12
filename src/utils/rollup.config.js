@@ -7,7 +7,7 @@ import createExternalField from '../rollup/create-external-field.function.js';
 import createInputField from '../rollup/create-input-field.function.js';
 
 const baseDir = 'utils';
-const utilDirs = ['animate', 'create-key-listener', 'debounce'];
+const utilDirs = ['animate', 'create-key-listener', 'debounce', 'lock'];
 
 const utilDir = `${inputDir}/${baseDir}`;
 
