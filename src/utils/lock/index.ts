@@ -1,3 +1,3 @@
-import semaphore from './lock.function';
+import lock from './lock.function';
 
-export { semaphore };
+export { lock };
