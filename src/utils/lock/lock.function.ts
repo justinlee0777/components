@@ -2,13 +2,13 @@
  * Ensures that the passed function is not called until its last invocation is finished.
  */
 export default function lock<Return>(
-  callback: () => Promise<Return>,
-): () => Promise<Return> {
+  callback: (...args: Array<unknown>) => Promise<Return>,
+): (...args: Array<unknown>) => Promise<Return> {
   let awaited: Promise<Return> | null;
 
-  return async () => {
+  return async (...args) => {
     if (!awaited) {
-      awaited = callback();
+      awaited = callback(...args);
 
       const result = await awaited;
 
